@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dynamic Caching</title>
+</head>
+<body>
+  <h1>Dynamic Caching Example</h1>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('dynamic-sw.js')
+        .then(() => console.log('Dynamic SW registered ✅'))
+        .catch(err => console.log('SW registration failed ❌', err));
+    }
+  </script>
+</body>
+</html>
